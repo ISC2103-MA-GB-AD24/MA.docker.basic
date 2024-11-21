@@ -139,12 +139,21 @@ docker ps
 --------------------------
 docker exec -it <CONTAINER-ID> /bin/bash
 
+docker exec -it <container-id/container-name> /bin/bash (o bien) /bin/sh
+
+docker exec -it ca903 /bin/bash
+docker exec -it ca903 /bin/sh
+
+-it -> interactive terminal
+
 Ej.- Entrar a un contenedor y revisar su sistema de archivos y ejectuar algunos comandos Linux
 
 ls
 pwd
 env
 exit
+
+#exit -> salir de la terminal del contenedor
 
 12.-REVISAR LA BITACORA (LOG) DE LA EJECUCION DE UN CONTENEDOR
 ---------------------------------------------------------------
@@ -157,19 +166,7 @@ Ej.- Revisando la bitácora del contenedor
 docker logs redis-latest
 docker logs redis-older
 
-13.-EJECUTAR LA TERMINAL DEL CONTENEDOR
----------------------------------------
-
-docker exec -it <container-id/container-name> /bin/bash (o bien) /bin/sh
-
-docker exec -it ca903 /bin/bash
-docker exec -it ca903 /bin/sh
-
--it -> interactive terminal
-
-#exit -> salir de la terminal del contenedor
-
-14.- PUBLICANDO LA IMAGEN A DOCKER HUB
+13.- PUBLICANDO LA IMAGEN A DOCKER HUB
 --------------------------------------
 Construyendo imagen local Docker. Ejecutar este comando en el directorio donde se encuentra el archivo DOCKERFILE:
 
